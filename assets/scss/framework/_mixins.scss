@@ -1,0 +1,74 @@
+/* ==========================================================================
+    MIXINS
+   ========================================================================== */
+/* Breakpoint Mixins */
+/* Usage - Use instead in place of media queries - Values set in variables partial  */
+@mixin phone-portrait {
+    @media (min-width: $phonePortrait) {
+        @content
+    }
+}
+@mixin phone-landscape {
+    @media (min-width: $phoneLandscape) {
+        @content
+    }
+}
+@mixin tablet-portrait {
+    @media (min-width: $tabletPortrait) {
+        @content
+    }
+}
+@mixin tablet-landscape {
+    @media (min-width: $tabletLandscape) {
+        @content
+    }
+}
+@mixin small-desktop {
+    @media (min-width: $smallDesktop) {
+        @content
+    }
+}
+
+/* Ultra specific breakpoints to create hard limits */
+@mixin only-phone-portrait {
+    @media (min-width: $phonePortrait) and (max-width: $phoneLandscape - 1) {
+        @content
+    }
+}
+@mixin only-phone-landscape {
+    @media (min-width: $phoneLandscape) and (max-width: $tabletPortrait - 1) {
+        @content
+    }
+}
+@mixin only-tablet-portrait {
+    @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape - 1) {
+        @content
+    }
+}
+@mixin only-tablet-landscape {
+    @media (min-width: $tabletLandscape) and (max-width: $smallDesktop - 1) {
+        @content
+    }
+}
+@mixin only-small-desktop {
+    @media (min-width: $smallDesktop) and (max-width: $desktop - 1) {
+        @content
+    }
+}
+
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content
+    }
+}
+
+/* Line height */
+/* Usage - Apply to any element you want to vertically align */
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

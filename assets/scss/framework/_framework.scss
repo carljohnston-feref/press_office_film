@@ -1,0 +1,8 @@
+/* ==========================================================================
+    FRAMEWORK STYLES
+   ========================================================================== */
+
+$containerWidth :   1312px;
+$columnWidth :      3.333333; //In percent
+$column :           12; //Twelve columns
+$columnGutter   : (100 - ($columnWidth * $column)) / ($column - 1);

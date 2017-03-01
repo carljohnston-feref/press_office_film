@@ -1,0 +1,53 @@
+@include phone-portrait{
+    @for $i from 1 through $column {
+        .col-xs-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+        }
+    }
+}
+@include phone-landscape{
+    @for $i from 1 through $column {
+        .col-sm-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+    }
+}
+@include tablet-portrait{
+    @for $i from 1 through $column {
+        .col-md-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+    }
+}
+@include tablet-landscape{
+    @for $i from 1 through $column {
+        .col-lg-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+    }
+}
+@include small-desktop{
+    @for $i from 1 through $column {
+        .col-xl-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+    }
+}
+@include desktop{
+    @for $i from 1 through $column {
+        .col-xxl-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+/* ==========================================================================
+    VARIABLES
+   ========================================================================== */
+/*
+	You can add new variables underneath the appropriate category.
+	Please comment if not obvious what the variables function is
+
+	Relative(rem) units are used instead of pixels and scaled against 16px default font size of body.
+*/
+
+/* ==========================================================================
+    MEDIA QUERIES
+   ========================================================================== */
+$phonePortrait: 20rem;
+$phoneLandscape: 30rem;
+$tabletPortrait: 48rem;
+$tabletLandscape: 64rem;
+$smallDesktop: $containerWidth;
+$desktop:  96.25rem;
+
+/* ==========================================================================
+    LAYOUT
+   ========================================================================== */
+$smallInnerPadding: 0.5rem;
+$defaultInnerPadding: 1.5rem;
+$largeInnerPadding: 2.5rem;
